@@ -1,0 +1,26 @@
+<!-- Colocar al final de los css-->  
+<link href="<?=base_url()?>application/assets/lobiboxNotifications/css/lobibox.min.css" rel="stylesheet" type="text/css">
+
+<!-- Colocar al final de los scripts -->  
+<script type="text/javascript" src="<?=base_url()?>application/assets/lobiboxNotifications/js/lobibox.min.js"></script>
+
+<!-- Ejemplo -->  
+<script>
+$("#solicitar").click(function(){
+        if($("#convocatoria").val() == 0){
+            Lobibox.notify('error', {
+                msg: 'Primero debes seleccionar una convocatoria.',
+                iconSource: "fontAwesome",
+                size: 'mini',
+                width: 500,
+                rounded: true,
+                position: 'center top',
+                sound: false,
+                delay: 3000,
+                delayIndicator: false,
+            });
+        }else{
+            $("#solicitarBeca").submit();
+        }
+    });
+</script>
